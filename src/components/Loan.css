@@ -1,0 +1,149 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f0f0f0, #c9d6ff);
+    color: #333;
+  }
+  
+  /* Loan Page Container */
+  .loan-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Heading Styles */
+  .loan-page h2, h3, h4 {
+    color: #4a90e2;
+    text-align: center;
+  }
+  
+  /* User Details */
+  .loan-page p {
+    color: #000000;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  /* Apply Loan Section */
+  .loan-page .apply-loan {
+    margin-top: 20px;
+    border: 1px solid #4a90e2;
+    border-radius: 10px;
+    padding: 15px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Labels and Inputs */
+  .loan-page label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a90e2;
+  }
+  
+  input[type="number"],
+  select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #2980b9;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .loan-button,
+  .my-loans-button {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .loan-button:hover,
+  .my-loans-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Loan Options Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #4a90e2;
+    text-align: center;
+  }
+  
+  th {
+    background: #4a90e2;
+    color: white;
+  }
+  
+  /* Loan List */
+  .loan-list {
+    margin-top: 20px;
+  }
+  
+  .loan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .loan-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .loan-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Message */
+  .loan-page .message {
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

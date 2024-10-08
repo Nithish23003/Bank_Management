@@ -1,0 +1,218 @@
+/* Home.css */
+
+.home-page {
+    position: relative;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .bubble {
+    position: absolute;
+    z-index: 0; /* Position bubbles behind content */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: rise 15s infinite ease-in-out;
+  }
+  
+  .bubble:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    left: 10%;
+    animation-duration: 18s;
+  }
+  
+  .bubble:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    left: 70%;
+    animation-duration: 22s;
+  }
+  
+  .bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: 40%;
+    animation-duration: 20s;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    100% {
+      transform: translateY(-1000px) rotate(360deg);
+    }
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* Brighten text */
+    animation: fadeIn 2s ease-in-out;
+    z-index: 1; /* Keep text on top of bubbles */
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff; /* Increase text brightness */
+    animation: fadeIn 3s ease-in-out;
+    z-index: 1; /* Keep text on top of bubbles */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Bank description */
+  .bank-description {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    color: white; /* Brighten text */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    max-width: 600px;
+    animation: slideUp 1.5s ease-in-out;
+    z-index: 1; /* Keep content on top of bubbles */
+  }
+  
+  .bank-description h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  span{
+    color: #ffdf00;
+  }
+  
+  .bank-description p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .bank-description ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .bank-description li {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .bank-description li::before {
+    content: "✔";
+    color: #ffdf00;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .home-page .view-account-btn {
+    background-color: #e0e261;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px; /* Reduced padding to make the button smaller */
+    font-size: 1rem; /* Smaller font size for better fit */
+    border-radius: 20px;
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Make button take only the necessary width */
+    width: auto; /* Auto width for a more compact size */
+    text-align: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .view-account-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Account Details Section */
+  .account-details {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for readability */
+    color: #fff; /* Brighten text */
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    animation: zoomIn 1s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    z-index: 1; /* Keep content on top of bubbles */
+  }
+  
+  .account-details h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffdf00;
+  }
+  
+  .account-details p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .home-page {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .bank-description {
+      max-width: 100%;
+    }
+  
+    .view-account-btn {
+      font-size: 1rem;
+    }
+  }
+  

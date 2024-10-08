@@ -1,0 +1,102 @@
+/* Profile Page Styles */
+.profile-page {
+    background-color: #f0f4f8; /* Soft background color for a clean look */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    background-color: #fff; /* White card background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.7s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  .profile-card h2 {
+    font-size: 2.5rem;
+    color: #333; /* Darker text for contrast */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .profile-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between; /* Align label and value */
+    border-bottom: 1px solid #ddd; /* Underline between profile details */
+    padding-bottom: 10px;
+    color: #555; /* Softer gray color for text */
+  }
+  
+  .profile-card p strong {
+    color: #2193b0; /* Highlight the labels in blue */
+    width: 160px; /* Fixed width for labels to align content */
+    flex-shrink: 0; /* Prevent label from shrinking */
+  }
+  
+  .profile-card p span {
+    color: #333; /* Darker color for values */
+    flex-grow: 1; /* Expand to take available space */
+    text-align: right; /* Align values to the right */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-card {
+      padding: 20px;
+    }
+  
+    .profile-card h2 {
+      font-size: 2rem;
+    }
+  
+    .profile-card p {
+      font-size: 1rem;
+    }
+  
+    .profile-card p strong {
+      width: 140px;
+    }
+  }
+
+  .profile-card .edit-btn, 
+.profile-card .save-btn {
+  padding: 10px 20px;
+  background-color: #2193b0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-card .edit-btn:hover, 
+.profile-card .save-btn:hover {
+  background-color: #6dd5ed;
+}
+
+  
